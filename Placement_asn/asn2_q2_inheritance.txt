@@ -1,0 +1,43 @@
+#When a class is derived from more than one base class it is called multiple Inheritance.
+
+#case 1 : Base classes have overridden methods
+
+class Base1:
+    def fnc(self):
+        print("BASE1")
+class Base2:
+    def fnc(self):
+        print("BASE2")
+class Child(Base1,Base2):
+        pass
+
+obj = Child()
+obj.fnc()
+
+
+This gives the output as :
+BASE1
+Since the base class BASE1 is before class BASE2 in the parameter list of the child class.
+
+# Case 2 :
+
+class Base1:
+    def fnc(self):
+        print("BASE1")
+class Base2:
+    def fnc(self):
+        print("BASE2")
+class Child(Base1,Base2):
+    def fnc(self):
+        print("Child")
+obj = Child()
+obj.fnc()
+Base1.fnc(obj)
+Base2.fnc(obj)
+
+
+
+This gives the output as : all the classes have same function
+Child
+BASE1
+BASE2

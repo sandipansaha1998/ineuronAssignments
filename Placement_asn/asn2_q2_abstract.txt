@@ -1,0 +1,27 @@
+# An abstract class allows to create a set of methods that must be created within any child class 
+# that inherits from the abstract class.AbstractBaseClass(ABC) is to be imported to implement the 
+# concept of abstract class
+
+from abc import ABC,abstractmethod
+class Vehicle(ABC):
+     def fuel(self):
+        pass
+
+class Swift(Vehicle):
+    def fuel(self):
+        print("Petrol")
+
+class XUV(Vehicle):
+    def fuel(self):
+        print("Diesel")
+
+
+class Tesla(Vehicle):
+    def fuel(self):
+        print("Electric")
+
+if __name__ == '__main__':
+    XUV().fuel()
+    Swift().fuel()
+    Tesla().fuel()
+ 
